@@ -8,12 +8,12 @@
 #include "selinux_internal.h"
 #include "policy.h"
 
-#ifdef HOST
+//#ifdef HOST
 static pid_t gettid(void)
 {
 	return syscall(__NR_gettid);
 }
-#endif
+//#endif
 
 static int getprocattrcon(security_context_t * context,
 			  pid_t pid, const char *attr)
